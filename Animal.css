@@ -1,0 +1,314 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('back2.jpg');
+}
+header
+{
+    background: #010111;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    height: 100px;
+    position: sticky;
+    top: 0;
+}
+h1
+{
+    font-size: 35px;
+    background: -webkit-linear-gradient(rgb(45, 213, 53), rgb(36, 39, 214));
+    -webkit-background-clip : text;
+    -webkit-text-fill-color: transparent;
+    padding-right: 5px;
+}
+#FreeUB
+{
+    text-decoration: none;
+}
+#logo
+{
+    border-radius: 50px;
+    margin-top: -50px;
+    margin-left: 45%;
+    width:100px;
+    height:100px;
+}
+.scroll-down {
+    height: 80px;
+    width: 40px;
+    border: 2px solid rgb(5, 189, 42);
+    position: absolute;
+    left: 75%;
+    bottom: 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px #020088;  }
+  .scroll-down::before,
+  .scroll-down::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    border: 2px solid rgb(2, 187, 2);
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1s ease-in-out infinite;
+  }
+  .scroll-down::before {
+    top: 30%;
+    animation-delay: 0.3s;
+    /* animation: scroll-down 1s ease-in-out infinite; */
+  }
+  
+  @keyframes scroll-down {
+    0% {
+      /* top:20%; */
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    100% {
+      top: 90%;
+      opacity: 0;
+    }
+  }
+  #scrolDownEnd
+  {
+      margin-bottom: 200px;
+  }
+  h2
+{
+  font-size: medium;
+  color: #17c1d8;
+
+}
+p
+{
+    text-align: justify;
+    color: rgb(92, 245, 78);
+    margin-left: 120px;
+}
+#aside1
+{
+    background-image: url('aside1back.jpg');
+    height: 100%;
+    margin-top: 38%;
+    padding-bottom: 100%;
+}
+#aside2
+{
+  display: flex;
+
+}
+.asideB
+{
+    width: 50%;
+    max-height: 100%;
+    padding-bottom: 10px;
+
+}
+button
+{
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    border-radius: 20px;
+    width: 150px;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+button:hover
+{
+    color: rgb(4, 161, 4);
+}
+
+/*shearch*/
+.wrapper
+{
+    max-width: 370px;
+    margin-top: -100px;
+    margin-left: 50px;
+    display: none;
+}
+.wrapper .search-input{
+    background: #fff;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+  }
+  .search-input input{
+    height: 40px;
+    width: 82%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0 60px 0 20px;
+    font-size: 18px;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+  }
+
+  .search-input .icon{
+    position: absolute;
+    right: 0px;
+    top: -5px;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    line-height: 55px;
+    font-size: 20px;
+    cursor: pointer;
+
+  }
+  .search-input .autocom-box{
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  .autocom-box li{
+    list-style: none;
+    padding: 8px 12px;
+    display: none;
+    width: 80%;
+    cursor: default;
+    border-radius: 3px;
+  }
+  .autocom-box li:hover{
+    background: #efefef;
+  }
+  .search-input.active .autocom-box{
+    padding: 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .search-input.active .autocom-box li{
+    display: block;
+  }
+
+
+
+  @media all and (max-width: 1024px)
+{
+
+
+    header
+    {
+        width: 105%;
+        height: 80px;
+    }
+    h1
+    {
+        margin-left: 360px;
+        margin-top: 20px;
+        font-size: 23px;
+    }
+    #logo
+    {
+        margin-left: 40%;
+        width: 70px;
+        height: 70px;
+        position: relative;
+    }
+    #aside1
+    {
+        margin-top: 500px;
+        height: 100%;
+        width: 105%;
+
+    }
+    h2
+    {
+      font-size: 10px;
+    }
+    aside img
+    {
+        width: 100px;
+        height: 250px;
+    }
+    button
+    {
+      width: 100px;
+      height: 50px;
+    }
+    .scroll-down
+    {
+      bottom: 120px;
+      left: 336px;
+    }
+    p
+    {
+        font-size: 7px;
+        margin-left: 20px;
+
+    }
+    /*sherch*/
+    .wrapper
+    {
+        width: 200px;
+        margin-top: -130px;
+        margin-left: 10px;
+        display: none;
+    }
+    .icon
+    {
+        margin-left: 50px;
+    }
+
+    footer img
+    {
+    width: 30px;
+    height: 30px;
+    }
+    footer p
+    {
+      font-size: 12px;
+
+    }
+
+
+
+}
+
+
+
+footer
+{
+    display: flex;
+    margin-top: 50px;
+    background: #17c1d8;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+footer a
+{
+    margin-left: 30px;
+}
+footer img
+{
+    border-radius: 50px;
+}
+footer p
+{
+    color: rgb(119, 5, 129);
+
+}
+
